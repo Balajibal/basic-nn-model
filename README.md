@@ -43,7 +43,7 @@ Plot the performance plot
 Evaluate the model with the testing data.
 
 ## PROGRAM
-
+```python
 from google.colab import auth
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
@@ -85,7 +85,7 @@ input=[[120]]
 inp_scale=scaler.transform(input)
 inp_scale.shape
 ai_brain.predict(inp_scale)
-
+```
 ## Dataset Information
 
 Include screenshot of the dataset
