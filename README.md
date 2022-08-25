@@ -44,7 +44,47 @@ Evaluate the model with the testing data.
 
 ## PROGRAM
 
-Include your code here
+from google.colab import auth
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.models import Sequential
+import gspread
+from google.auth import default
+import pandas as pd
+auth.authenticate_user()
+creds, _ = default()
+gc = gspread.authorize(creds)
+worksheet = gc.open('datasetexp1dl').sheet1
+
+rows = worksheet.get_all_values()
+
+df = pd.DataFrame(rows[1:], columns=rows[0])
+df.head()
+df=df.astype({'X':'float'})
+df=df.astype({'Y':'float'})
+X=df[['X']].values
+Y=df[['Y']].values
+x_train,x_test,y_train,y_test=train_test_split(X,Y,test_size=0.33,random_state=50)
+scaler=MinMaxScaler()
+scaler.fit(x_train)
+x_t_scaled = scaler.transform(x_train)
+x_t_scaled
+ai_brain = Sequential([
+    Dense(2,activation='relu'),
+    Dense(1,activation='relu')
+])
+ai_brain.compile(optimizer='rmsprop',loss='mse')
+ai_brain.fit(x=x_t_scaled,y=y_train,epochs=20000)
+import pandas as pd
+loss_df = pd.DataFrame(ai_brain.history.history)
+loss_df.plot()
+scal_x_test=scaler.transform(x_test)
+ai_brain.evaluate(scal_x_test,y_test)
+input=[[120]]
+inp_scale=scaler.transform(input)
+inp_scale.shape
+ai_brain.predict(inp_scale)
 
 ## Dataset Information
 
