@@ -44,6 +44,7 @@ Evaluate the model with the testing data.
 
 ## PROGRAM
 ```python
+# Importing Required packages
 from google.colab import auth
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
