@@ -10,7 +10,8 @@ Explain the problem statement
 
 ## Neural Network Model
 
-![nnet2](https://user-images.githubusercontent.com/75234946/187083510-70c889b3-4a50-4041-8241-7cef275b52ed.png)
+![1_oc1gaCFvgWXq_gHQFM63UQ](https://user-images.githubusercontent.com/75234946/187084018-841e10cc-d4bc-4b8b-9c5d-e3b46266c487.png)
+
 
 ## DESIGN STEPS
 
