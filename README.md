@@ -87,7 +87,7 @@ x_t_scaled
 ai_brain = Sequential([
     Dense(3,activation='relu'),
     Dense(4,activation='relu'),
-    Dense(1,activation='relu')
+    Dense(1)
 ])
 ai_brain.compile(optimizer='rmsprop',loss='mse')
 ai_brain.fit(x=x_t_scaled,y=y_train,epochs=20000)
