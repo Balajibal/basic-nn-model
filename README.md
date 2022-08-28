@@ -84,10 +84,9 @@ x_t_scaled
 # Build the Deep learning Model
 
 ai_brain = Sequential([
-    Dense(4,activation='relu'),
-    Dense(4,activation='relu'),
     Dense(3,activation='relu'),
-    Dense(2,activation='relu')
+    Dense(4,activation='relu'),
+    Dense(1,activation='relu')
 ])
 ai_brain.compile(optimizer='rmsprop',loss='mse')
 ai_brain.fit(x=x_t_scaled,y=y_train,epochs=20000)
