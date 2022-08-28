@@ -108,7 +108,8 @@ ai_brain.predict(inp_scale)
 
 ![image](https://user-images.githubusercontent.com/75234946/186728620-1fa89694-7e59-4bde-a56d-64acd7a65291.png)
 
-
+<br></br>
+<br></br>
 ## OUTPUT
 
 ### Training Loss Vs Iteration Plot
