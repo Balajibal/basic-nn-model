@@ -106,7 +106,8 @@ ai_brain.predict(inp_scale)
 ```
 ## Dataset Information
 
-![image](https://user-images.githubusercontent.com/75234946/186728620-1fa89694-7e59-4bde-a56d-64acd7a65291.png)
+![image](https://user-images.githubusercontent.com/75234946/187825120-37a8fa1d-60d4-40f5-aa15-b2b745844dd7.png)
+
 
 <br></br>
 <br></br>
@@ -120,12 +121,14 @@ ai_brain.predict(inp_scale)
 
 ### Test Data Root Mean Squared Error
 
-![image](https://user-images.githubusercontent.com/75234946/186729251-84bcadfc-1785-468d-bf92-7f1a2e2185d9.png)
+![image](https://user-images.githubusercontent.com/75234946/187824906-db7b28be-7f9a-4e07-bb34-237ea1f6aaa5.png)
+
 
 
 ### New Sample Data Prediction
 
-![image](https://user-images.githubusercontent.com/75234946/187824688-4c0e760e-78fd-4687-b5f5-f14c8c8a6bff.png)
+![image](https://user-images.githubusercontent.com/75234946/187825011-058359aa-b8a7-4e07-abc0-787b09c2cb8d.png)
+
 
 
 
