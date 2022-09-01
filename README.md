@@ -62,17 +62,17 @@ import pandas as pd
 auth.authenticate_user()
 creds, _ = default()
 gc = gspread.authorize(creds)
-worksheet = gc.open('datasetexp1dl').sheet1
+worksheet = gc.open('compdataset').sheet1
 
 # Construct Data frame using Rows and columns
 
 rows = worksheet.get_all_values()
 df = pd.DataFrame(rows[1:], columns=rows[0])
 df.head()
-df=df.astype({'X':'float'})
-df=df.astype({'Y':'float'})
-X=df[['X']].values
-Y=df[['Y']].values
+df=df.astype({'Input':'float'})
+df=df.astype({'Output':'float'})
+X=df[['Input']].values
+Y=df[['Output']].values
 
 # Split the testing and training data
 
@@ -114,7 +114,8 @@ ai_brain.predict(inp_scale)
 
 ### Training Loss Vs Iteration Plot
 
-![image](https://user-images.githubusercontent.com/75234946/186728854-2713f92f-3d72-443c-be18-99b81bf11512.png)
+![image](https://user-images.githubusercontent.com/75234946/187824538-c7780c65-ff13-4d4e-b922-cd591390478b.png)
+
 
 
 ### Test Data Root Mean Squared Error
@@ -124,7 +125,8 @@ ai_brain.predict(inp_scale)
 
 ### New Sample Data Prediction
 
-![image](https://user-images.githubusercontent.com/75234946/186729400-50ea08f8-31c0-4879-9542-7626737bcc3f.png)
+![image](https://user-images.githubusercontent.com/75234946/187824688-4c0e760e-78fd-4687-b5f5-f14c8c8a6bff.png)
+
 
 
 ## RESULT
